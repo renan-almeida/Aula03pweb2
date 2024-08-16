@@ -12,4 +12,31 @@ public class Livro {
     public String resumo;
     public String tipoCapa;
 
+
+    //Métodos
+
+    public void ExibirDadosLivro()
+    {
+        System.out.println("--------------------------------");
+        System.out.println("Nome: " + titulo);
+        System.out.println("Resumo: " + resumo);
+        System.out.println("Preço: " + valor);
+        System.out.println("Paginas: " + paginas);
+        if(temEditora())
+            editora.ExibirDadosEditora();
+            /*System.out.println("Editora: " + editora.nome);*/
+        System.out.println("--------------------------------");
+
+    }
+
+    public boolean temEditora()
+    {
+        if (editora == null)
+            return false;
+            else
+                return true;
+    }
+
+
+
 }
